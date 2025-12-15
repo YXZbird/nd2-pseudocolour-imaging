@@ -1,4 +1,38 @@
-## Workflow overview
-ND2 files are read using ND2Reader and unified to (C, Z, Y, X) format.
-Each channel is Z-projected, background-corrected, contrast-enhanced,
-and mapped to RGB for pseudocolour rendering.
+Workflow overview
+
+ND2 import
+ND2 files are loaded and normalised to (C, Z, Y, X).
+If a time axis is present, the first time point is analysed.
+
+Z-projection
+Each channel is collapsed into 2D using max or mean projection.
+
+Preprocessing (scikit-image)
+
+Background subtraction (Gaussian filtering)
+
+Intensity normalisation
+
+Adaptive histogram equalisation (CLAHE)
+
+Mild Gaussian smoothing
+
+Pseudocolour rendering
+Processed channels are combined into an RGB image
+(488 → red, 568 → green, DAPI → blue).
+
+Pixel-level quantification
+Intensity distributions are summarised using basic statistics.
+
+Signal mask generation
+Otsu thresholding and morphological filtering define signal regions.
+
+Object-level measurement
+Connected components are labelled and measured using
+skimage.measure.regionprops_table.
+
+Outputs
+
+Per-file summary table
+
+Object-level feature tables (CSV)
