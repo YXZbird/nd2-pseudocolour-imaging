@@ -1,0 +1,7 @@
+#requirements：
+nd2reader
+numpy
+scikit-image
+tifffile
+pillow
+matplotlib
