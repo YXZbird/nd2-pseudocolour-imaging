@@ -1,0 +1,4 @@
+## Workflow overview
+ND2 files are read using ND2Reader and unified to (C, Z, Y, X) format.
+Each channel is Z-projected, background-corrected, contrast-enhanced,
+and mapped to RGB for pseudocolour rendering.
