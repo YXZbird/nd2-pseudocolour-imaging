@@ -32,7 +32,7 @@ For each ND2 file:
 * Per-file quantitative summary (`quant_summary.csv`)
 * Object-level feature table extracted from signal regions
 
-Example output:(example_rgb.jpg)
+Example output:(example.jpg)
 
 
 ### Notes
