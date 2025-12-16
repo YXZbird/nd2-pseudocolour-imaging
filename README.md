@@ -46,4 +46,4 @@ Example output:(example.jpg)
 Yixiao Zhou
 PhD Candidate, The University of Western Australia
 
-**Note:** Raw ND2 data are not included due to file size constraints.
+**Note:** Sample data are provided to allow testing of the pipeline.
